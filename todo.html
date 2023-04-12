@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="mystyle.css"/>
+<title>ToDo Unknown Era</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+
+<h3>ToDo List | 
+    <button class="GFG" 
+    onclick="window.location.href = 'index.html';">
+        Home
+    </button>
+    <button class="GFG" 
+    onclick="window.location.href = 'screenshots.html';">
+        Media
+    </button>
+    <button class="GFG" 
+    onclick="window.location.href = 'bugs.html';">
+        Bugs Doc
+    </button>
+    <button class="GFG" 
+    onclick="window.location.href = 'features.html';">
+        Features 
+    </button>
+</h3>
+<div class = "intro">
+    <p>
+    <strong><u>Decomposing Corpses</u></strong>.
+    <ul>
+        When someone dies you have the option to bury them, in which a small grave mound will appear.
+        <br>Alternatively if you do nothing the corpse will stay in the position it was and bloat, shrivel up,
+        and after a long enough time turn almost fully into a skeleton. The length from start to final decomposition is about 30 days.
+        Decomposing unburied corpses sour the mood of the rest of the NPCs and increase chances of disease.
+
+    </ul>
+    <br>
+    <b><u>Stealing Owned Goods</u></b>.
+    <ul>
+        Some goods have an owner associated with them, either a faction or specific NPC. If stealing from a specific NPC
+        the game will look if the NPC has a faction associated with him. When you pick up an item your player character momentarily has a tag 
+        labeled 'stealing' for a few seconds, if an NPC if the faction you are stealing from happens to be looking at you, you will be attacked by
+        all NPCs of that faction and have a soured relationship with said faction, and NPC owner if they exist.
+    </ul>
+    <br>
+    <strong><u>Wall Crawling Monsters</u></strong>.
+    <ul>
+        Monster characters can crawl on walls. This could be accomplished by having a floating pawn movement along with character movement;
+        Character movement component gets disabled when Floating Pawn movement component is enabled. Then
+        the character swivels head around, casting a short ray trace from their eyes, if they hit a wall object, they
+        go close as they can to the wall object, facing the wall object, and then initiate a crawling animation and move up a little bit
+        continously casting a short ray from their abdomen to readjust to the curvature of the wall if there is one,
+        while moving in randomized directions at the same time.
+        <img src="imgs\crawler1.png" alt="Crawler", style="width:200px;height:200px;", class = "paddedImg">
+
+    </ul>
+    <br>
+    </p>
+</div>
+
+</html>

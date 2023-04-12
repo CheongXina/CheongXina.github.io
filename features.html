@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="mystyle.css"/>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+<body>
+
+  <h3>Features | 
+    <button class="GFG" 
+    onclick="window.location.href = 'index.html';">
+        Home
+    </button>
+    <button class="GFG" 
+    onclick="window.location.href = 'screenshots.html';">
+        Media
+    </button>
+    <button class="GFG" 
+    onclick="window.location.href = 'bugs.html';">
+        Bugs Doc
+    </button>
+
+    <button class="GFG" 
+    onclick="window.location.href = 'todo.html';">
+        ToDo 
+    </button>
+</h3>
+<div class = "intro">
+  <strong>sapi.h</strong>
+  <ul>
+    Unknown Era uses Windows <b>sapi.h</b> in order to provide text to speech voices for characters.
+    How this is works is that when a character speaks the speech class checks the game state for a speech object pointer,
+    if NULL, speech object is created and stored in the game state as a pointer. If not NULL, the stored speech object pointer is used
+    to be operated with speech commands.
+    When a level is left, the speech object in the game state is destroyed. The speech object is not persistent.
+  </ul>
+  <strong>ReadWrite Manager</strong>
+  <ul>
+
+  </ul>
+  <strong>AI Scheduler Manager
+  </strong>
+  <ul>
+
+  </ul>
+  <strong>Entry Point System</strong>
+  <ul>
+
+  </ul>
+  <strong> Idler System</strong>
+  <ul>
+    Gets current system time on launch and compares it to last saved system time, if it exists. Then calculates hours passed
+    and runs the World Automation Manager to calculate changes to the data of the game world, events, places and characters
+  </ul>
+</div>
+</body>
+</html>
