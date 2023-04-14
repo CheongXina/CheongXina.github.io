@@ -26,6 +26,9 @@ body {
   .paddedImg{
     padding: 7px 7px;
   }
+  .logoImg{
+    padding: 0px 0px;
+  }
   h3 {
     margin-left: 20px;
     text-shadow: 2px 2px 2px lightcyan;
@@ -49,6 +52,16 @@ body {
   {
     
     width: 420px;
+
+  }
+}
+  @media screen and (max-width: 437px) 
+  {
+    .logoImg
+  {
+    
+    max-width: 70%;
+    max-height: 40%;
 
   }
 }
