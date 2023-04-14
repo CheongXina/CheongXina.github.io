@@ -43,16 +43,41 @@ body {
   </ul>
   <strong>ReadWrite Manager</strong>
   <ul>
-
+    This is placeable invisible object inside the level that will loop through each character present in the scene
+    and match the current present character to a matching character ID stored in the game state object 
+    (a game state object is an object that gets created once the game is started and persists through the duration
+    that the game is running on your device/computer.) Almost all characters present in a scene/level have all their 
+    data stored inside the game state. Anyways, once the a match between the scene character's ID and a character's ID in
+    the game state is found, the game state can choose wether to apply the information from the game state 
+    to the in scene character (Read) or get the current information about the in scene character and apply it
+    to the game state (Write). <br><br>
+    Examples: <br>
+    Let's say in your game state you have data about a character called Bob, so the game spawns a identityless blank slate human character, And
+    then the game decides to identify this blank nameless featureless human as 'Bob'
+    Then instantly after this the game applies all the traits from 'Bob' data as stored in the game state, to this in-scene blank slate character that the game decided to identify as 'Bob' <br>
+    
+    Bob is stored as being alive in the game state originally, and he is currently alive in the physical scene.<br>
+    Now, IF Bob in the scene dies, the ReadWrite Manager will grab the information of Bob as he
+    is in the scene (dead), and overwrite the data in the gamestate for Bob, changing his alive status to dead. <br>
+    Therefore now when you re-enter the scene/level, Bob will no longer spawn because he is now recorded in the game state
+    as being dead. (This is an example of how the ReadWrite Manager reads (applies) and writes (overwrites old data/store new data) )
   </ul>
   <strong>AI Scheduler Manager
   </strong>
   <ul>
-
+    All non player characters/NPCs have programming module attached to their code that reads/gets the the current
+    in-game date and time from the game state (or from a very similar class/object to the game state).
+    And then the module gets the assigned job of the NPC, and commands the NPC to behave a certain way based
+    on the date and time and job they are assigned to. ie, farmers plow the field every weekday between
+    8 AM to 5 PM.
   </ul>
   <strong>Entry Point System</strong>
   <ul>
-
+    The game uses invisible static actors (actors are placeable objects) called entry points. The entry points
+    are manually placed in a level/scene. The entry point spawns a character after reading through the character data stored in the 
+    game state object (a persistent data object that is initiated once every time the game file is opened and remains for the duration that
+    the game is running on your computer.) Alternatively, the ReadWrite Manager reads the game state object data, and then commands the specific
+    entry points to spawn a character if there is supposed to be a character present in the current level/scene at a specific entry point (this information is stored inside the game state object)
   </ul>
   <strong> Idler System</strong>
   <ul>
